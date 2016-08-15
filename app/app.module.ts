@@ -7,6 +7,7 @@ import { routing }        from './app.routing';
 
 import { HeroesComponent }  from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
+
 import { HeroService }  from './hero.service';
 
 import { DashboardComponent } from './dashboard.component';
