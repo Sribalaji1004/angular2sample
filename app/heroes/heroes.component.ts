@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'my-heroes',
-    templateUrl: './app/heroes.component.html',
-    styleUrls: ['./app/heroes.component.css'],
+    templateUrl: './app/heroes/heroes.component.html',
+    styleUrls: ['./app/heroes/heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
     
@@ -30,7 +30,7 @@ export class HeroesComponent implements OnInit {
     }
     
     gotoDetail() {
-        this.router.navigate(['/detail', this.selectedHero.id]);
+        this.router.navigate(['/hero', this.selectedHero.id]);
     }
 }
 

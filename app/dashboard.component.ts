@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Hero } from './heroes/hero';
+import { HeroService } from './heroes/hero.service';
 import { Router } from '@angular/router';
 
 
@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
   }
   
   gotoDetail(hero: Hero) {
-    let link = ['/detail', hero.id];
+    let link = ['/hero', hero.id];
     this.router.navigate(link);
   }
 
