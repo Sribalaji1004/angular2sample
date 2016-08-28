@@ -27,13 +27,13 @@ var HeroesComponent = (function () {
         this.getHeroes();
     };
     HeroesComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['/detail', this.selectedHero.id]);
+        this.router.navigate(['/hero', this.selectedHero.id]);
     };
     HeroesComponent = __decorate([
         core_1.Component({
             selector: 'my-heroes',
-            templateUrl: './app/heroes.component.html',
-            styleUrls: ['./app/heroes.component.css'],
+            templateUrl: './app/heroes/heroes.component.html',
+            styleUrls: ['./app/heroes/heroes.component.css'],
         }), 
         __metadata('design:paramtypes', [router_1.Router, hero_service_1.HeroService])
     ], HeroesComponent);
