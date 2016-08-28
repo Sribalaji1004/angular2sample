@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HeroesModule } from './heroes/heroes.module';
+import { HeroesModule } from 'app/heroes/heroes.module';
 
-import { AppComponent } from './app.component';
-import { routing }        from './app.routing';
+import { AppComponent } from 'app/app.component';
+import { routing }        from 'app/app.routing';
 
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from 'app/dashboard/dashboard.component';
 
 @NgModule({
     
