@@ -14,9 +14,6 @@ var forms_1 = require('@angular/forms');
 var heroes_module_1 = require('./heroes/heroes.module');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
-// import { HeroesComponent }  from './heroes.component';
-// import { HeroDetailComponent } from './hero-detail.component';
-// import { HeroService }  from './hero.service';
 var dashboard_component_1 = require('./dashboard.component');
 var AppModule = (function () {
     function AppModule() {

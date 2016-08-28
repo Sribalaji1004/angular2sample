@@ -6,10 +6,6 @@ import { HeroesModule } from './heroes/heroes.module';
 import { AppComponent } from './app.component';
 import { routing }        from './app.routing';
 
-// import { HeroesComponent }  from './heroes.component';
-// import { HeroDetailComponent } from './hero-detail.component';
-// import { HeroService }  from './hero.service';
-
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
