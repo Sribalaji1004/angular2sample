@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var heroes_module_1 = require('app/heroes/heroes.module');
+var toppartners_module_1 = require('app/top-partners/toppartners.module');
+var http_1 = require('@angular/http');
 var app_component_1 = require('app/app.component');
 var app_routing_1 = require('app/app.routing');
 var dashboard_component_1 = require('app/dashboard/dashboard.component');
@@ -24,7 +26,9 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 app_routing_1.routing,
-                heroes_module_1.HeroesModule
+                heroes_module_1.HeroesModule,
+                http_1.HttpModule,
+                toppartners_module_1.TopPartnersModule
             ],
             declarations: [
                 app_component_1.AppComponent,
