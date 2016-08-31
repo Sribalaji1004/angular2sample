@@ -10,21 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var top_partners_service_1 = require('./top-partners-service');
-var top_partners_component_1 = require('./top-partners-component');
-var top_partners_routing_1 = require('./top-partners-routing');
-var TopPartnersModule = (function () {
-    function TopPartnersModule() {
+var TopPartnersComponent = (function () {
+    function TopPartnersComponent(topPartnerService) {
+        this.topPartnerService = topPartnerService;
     }
-    TopPartnersModule = __decorate([
-        core_1.NgModule({
-            imports: [top_partners_routing_1.topPartnersRouting],
-            exports: [],
-            declarations: [top_partners_component_1.TopPartnersComponent],
-            providers: [top_partners_service_1.TopPartnersService],
+    TopPartnersComponent.prototype.ngOnInit = function () {
+        this.pageTitle = "Top Partners";
+    };
+    TopPartnersComponent = __decorate([
+        core_1.Component({
+            selector: 'top-partners',
+            templateUrl: './app/top-partners/top-partners.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], TopPartnersModule);
-    return TopPartnersModule;
+        __metadata('design:paramtypes', [top_partners_service_1.TopPartnersService])
+    ], TopPartnersComponent);
+    return TopPartnersComponent;
 }());
-exports.TopPartnersModule = TopPartnersModule;
-//# sourceMappingURL=toppartners.module.js.map
+exports.TopPartnersComponent = TopPartnersComponent;
+//# sourceMappingURL=top-partners-component.js.map
