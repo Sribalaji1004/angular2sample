@@ -15,7 +15,11 @@ var TopPartnersComponent = (function () {
         this.topPartnerService = topPartnerService;
     }
     TopPartnersComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.pageTitle = "Top Partners";
+        console.log("in init");
+        this.topPartnerService.getTopPartners()
+            .subscribe(function (tp) { return _this.topPartners = tp; });
     };
     TopPartnersComponent = __decorate([
         core_1.Component({

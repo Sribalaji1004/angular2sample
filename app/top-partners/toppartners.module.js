@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var common_1 = require('@angular/common');
 var top_partners_service_1 = require('./top-partners-service');
 var top_partners_component_1 = require('./top-partners-component');
 var top_partners_routing_1 = require('./top-partners-routing');
@@ -17,7 +18,7 @@ var TopPartnersModule = (function () {
     }
     TopPartnersModule = __decorate([
         core_1.NgModule({
-            imports: [top_partners_routing_1.topPartnersRouting],
+            imports: [common_1.CommonModule, top_partners_routing_1.topPartnersRouting],
             exports: [],
             declarations: [top_partners_component_1.TopPartnersComponent],
             providers: [top_partners_service_1.TopPartnersService],

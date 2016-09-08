@@ -19,5 +19,9 @@ export class TopPartnersComponent implements OnInit {
     public pageTitle: string;
     ngOnInit(){
         this.pageTitle = "Top Partners";
+        console.log("in init");
+        
+        this.topPartnerService.getTopPartners()
+            .subscribe(tp => this.topPartners = tp);
     }
 }
