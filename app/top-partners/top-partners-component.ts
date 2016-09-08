@@ -22,6 +22,8 @@ export class TopPartnersComponent implements OnInit {
         console.log("in init");
         
         this.topPartnerService.getTopPartners()
-            .subscribe(tp => this.topPartners = tp);
+            .subscribe(tp => this.topPartners = tp,
+                        err => console.log(err)
+            );
     }
 }

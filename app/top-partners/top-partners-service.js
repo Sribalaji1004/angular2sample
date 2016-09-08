@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/add/operator/catch');
 var TopPartnersService = (function () {
     function TopPartnersService(http) {
         this.http = http;
@@ -20,8 +22,14 @@ var TopPartnersService = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         console.log(options);
         return this.http.get(this.serviceBase, options)
-            .map(function (res) { return res.json().value; });
-        //.catch(err => console.log(err.message));
+            .map(function (res) { return res.json().value; })
+            .catch(function (err) {
+            console.log(err);
+            //return Observable.of(undefined);
+            return Observable_1.Observable.throw(new Error(err.status));
+        });
+    };
+    TopPartnersService.prototype.handleError = function (error) {
     };
     TopPartnersService = __decorate([
         core_1.Injectable(), 

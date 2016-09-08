@@ -19,7 +19,7 @@ var TopPartnersComponent = (function () {
         this.pageTitle = "Top Partners";
         console.log("in init");
         this.topPartnerService.getTopPartners()
-            .subscribe(function (tp) { return _this.topPartners = tp; });
+            .subscribe(function (tp) { return _this.topPartners = tp; }, function (err) { return console.log(err); });
     };
     TopPartnersComponent = __decorate([
         core_1.Component({
