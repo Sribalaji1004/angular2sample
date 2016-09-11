@@ -3,6 +3,8 @@ import { TopPartnersService } from './top-partners-service';
 import { TopPartners } from './top-partners';
 import { topPartnersRouting } from './top-partners-routing';
 import { OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
 
 @Component({
     selector: 'top-partners',
@@ -22,8 +24,8 @@ export class TopPartnersComponent implements OnInit {
         console.log("in init");
         
         this.topPartnerService.getTopPartners()
-            .subscribe(tp => this.topPartners = tp,
-                        err => console.log(err)
-            );
+            .catch(err => { console.log(err + ' in Component'); return Observable.throw(true); })
+            .subscribe(tp => { this.topPartners = tp, err => { console.log("error here"); console.log(err)}});
+            
     }
 }

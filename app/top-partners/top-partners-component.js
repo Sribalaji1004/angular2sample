@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var top_partners_service_1 = require('./top-partners-service');
+var Observable_1 = require('rxjs/Observable');
+require('rxjs/add/operator/catch');
 var TopPartnersComponent = (function () {
     function TopPartnersComponent(topPartnerService) {
         this.topPartnerService = topPartnerService;
@@ -19,7 +21,8 @@ var TopPartnersComponent = (function () {
         this.pageTitle = "Top Partners";
         console.log("in init");
         this.topPartnerService.getTopPartners()
-            .subscribe(function (tp) { return _this.topPartners = tp; }, function (err) { return console.log(err); });
+            .catch(function (err) { console.log(err + ' in Component'); return Observable_1.Observable.throw(true); })
+            .subscribe(function (tp) { _this.topPartners = tp, function (err) { console.log("error here"); console.log(err); }; });
     };
     TopPartnersComponent = __decorate([
         core_1.Component({

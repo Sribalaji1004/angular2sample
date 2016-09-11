@@ -14,9 +14,24 @@ var forms_1 = require('@angular/forms');
 var heroes_module_1 = require('./heroes/heroes.module');
 var toppartners_module_1 = require('./top-partners/toppartners.module');
 var http_1 = require('@angular/http');
+//import { bind } from '@angular/core';
+//import { HTTP_BINDINGS, BaseRequestOptions, RequestOptions } from '@angular/http';
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
+var http_client_1 = require('./http-client');
+/*
+class MyOptions extends BaseRequestOptions {
+  constructor () {
+    super();
+    var token = window.localStorage.getItem("myToken");
+    console.log(token);
+    this.headers.append('My-Custom-Header','MyCustomHeaderValue');
+    console.log(this.headers);
+  }
+  // search: string = 'coreTeam=true';
+}
+*/
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +49,9 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent
             ],
-            providers: [],
+            providers: [
+                http_client_1.HttpClient
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
