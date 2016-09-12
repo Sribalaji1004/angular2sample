@@ -26,8 +26,9 @@ var TopPartnersComponent = (function () {
     };
     TopPartnersComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'top-partners',
-            templateUrl: './app/top-partners/top-partners.html'
+            templateUrl: 'top-partners.html'
         }), 
         __metadata('design:paramtypes', [top_partners_service_1.TopPartnersService])
     ], TopPartnersComponent);
